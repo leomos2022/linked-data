@@ -16,9 +16,9 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            color: #1e293b;
+            color: #333;
         }
 
         .container {
@@ -30,27 +30,23 @@
         .header {
             text-align: center;
             margin-bottom: 40px;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            background: rgba(255, 255, 255, 0.95);
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .header h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #2c3e50;
             margin-bottom: 10px;
         }
 
         .header .subtitle {
             font-size: 1.1rem;
-            color: #64748b;
+            color: #7f8c8d;
             margin-bottom: 15px;
         }
 
@@ -62,18 +58,12 @@
         }
 
         .metric-card {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             padding: 15px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
-            transition: transform 0.2s ease;
-        }
-
-        .metric-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         .metric-card .number {
@@ -96,44 +86,40 @@
         }
 
         .nav-tab {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
             padding: 12px 24px;
             border-radius: 25px;
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s ease;
-            color: #475569;
+            color: #2c3e50;
             font-size: 0.95rem;
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
         }
 
         .nav-tab:hover {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            background: rgba(255, 255, 255, 1);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
-            color: #334155;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .nav-tab.active {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
             color: white;
-            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
-            border-color: #334155;
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
         }
 
         .viz-panel {
             display: none;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             margin-bottom: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .viz-panel.active {
@@ -159,15 +145,12 @@
         .panel-title {
             font-size: 1.8rem;
             font-weight: 600;
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #2c3e50;
             margin-bottom: 8px;
         }
 
         .panel-description {
-            color: #64748b;
+            color: #7f8c8d;
             font-size: 1rem;
             line-height: 1.5;
         }
@@ -188,27 +171,20 @@
         }
 
         .insight-card {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 20px;
             border-radius: 15px;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-            transition: transform 0.2s ease;
-        }
-
-        .insight-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
+            border-left: 4px solid #3498db;
         }
 
         .insight-card h4 {
-            color: #0f172a;
+            color: #2c3e50;
             margin-bottom: 10px;
             font-weight: 600;
         }
 
         .insight-card p {
-            color: #475569;
+            color: #6c757d;
             font-size: 0.95rem;
             line-height: 1.4;
         }
@@ -259,7 +235,7 @@
         }
 
         .data-table th {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             padding: 15px;
             text-align: left;
@@ -268,11 +244,12 @@
 
         .data-table td {
             padding: 12px 15px;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: #ffffff;
         }
 
         .data-table tr:hover {
-            background: #f8fafc;
+            background: rgba(255,255,255,0.1);
         }
 
         .progress-bar {
@@ -641,8 +618,8 @@
                     labels: ['Salud', 'Artes', 'Ingeniería', 'Ciencias Sociales', 'Administración'],
                     type: 'pie',
                     marker: {
-                    colors: ['#0f172a', '#1e40af', '#3b82f6', '#60a5fa', '#93c5fd']
-                },
+                        colors: ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6']
+                    },
                     textinfo: 'label+percent',
                     textposition: 'auto',
                     hovertemplate: '<b>%{label}</b><br>Estudiantes: %{value}<br>Porcentaje: %{percent}<extra></extra>'
@@ -669,7 +646,7 @@
                 y: [2033, 2010, 2004, 1984, 1969],
                 type: 'bar',
                 marker: {
-                    color: ['#0f172a', '#1e40af', '#3b82f6', '#60a5fa', '#93c5fd'],
+                    color: ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6'],
                     opacity: 0.8
                 },
                 text: [2033, 2010, 2004, 1984, 1969],
@@ -699,7 +676,7 @@
                 y: [2075, 2036, 2026, 1932, 1931],
                 type: 'bar',
                 marker: {
-                    color: '#1e40af',
+                    color: '#3498db',
                     opacity: 0.8
                 },
                 text: [2075, 2036, 2026, 1932, 1931],
@@ -728,7 +705,7 @@
                 y: [873, 794, 792, 771, 723, 463],
                 type: 'bar',
                 marker: {
-                    color: '#dc2626',
+                    color: '#ff6b35',
                     opacity: 0.8
                 },
                 text: [873, 794, 792, 771, 723, 463],
@@ -762,14 +739,14 @@
                     y: [1004, 974, 998, 1020, 990, 997],
                     name: 'Universidades Públicas',
                     type: 'bar',
-                    marker: { color: '#1e40af' }
+                    marker: { color: '#4caf50' }
                 },
                 {
                     x: ['Estrato 1', 'Estrato 2', 'Estrato 3', 'Estrato 4', 'Estrato 5', 'Estrato 6'],
                     y: [706, 662, 696, 615, 665, 673],
                     name: 'Universidades Privadas',
                     type: 'bar',
-                    marker: { color: '#dc2626' }
+                    marker: { color: '#ff9800' }
                 }
             ];
 
@@ -796,14 +773,14 @@
                     y: [1001, 988, 1021, 999, 991],
                     name: 'Femenino',
                     type: 'bar',
-                    marker: { color: '#dc2626' }
+                    marker: { color: '#e91e63' }
                 },
                 {
                     x: ['Salud', 'Artes', 'Ingeniería', 'Ciencias Sociales', 'Administración'],
                     y: [1074, 1048, 1005, 933, 940],
                     name: 'Masculino',
                     type: 'bar',
-                    marker: { color: '#1e40af' }
+                    marker: { color: '#2196f3' }
                 }
             ];
 
@@ -863,7 +840,104 @@
         // Inicializar dashboard
         document.addEventListener('DOMContentLoaded', function() {
             createOverviewChart();
+            createPatternAnalysisAnimation();
         });
+
+        // Función de animación de análisis de patrones
+        function createPatternAnalysisAnimation() {
+            const container = document.createElement('div');
+            container.id = 'pattern-analysis-animation';
+            container.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                width: 300px;
+                height: 200px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 15px;
+                padding: 20px;
+                color: white;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                z-index: 1000;
+                opacity: 0;
+                transform: translateX(320px);
+                transition: all 0.5s ease;
+                font-family: 'Inter', sans-serif;
+            `;
+
+            const title = document.createElement('h3');
+            title.textContent = '🔍 Análisis en Tiempo Real';
+            title.style.cssText = 'margin: 0 0 10px 0; font-size: 16px; font-weight: 600;';
+
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                width: 100%;
+                height: 8px;
+                background: rgba(255,255,255,0.3);
+                border-radius: 4px;
+                margin: 10px 0;
+                overflow: hidden;
+            `;
+
+            const progressFill = document.createElement('div');
+            progressFill.style.cssText = `
+                height: 100%;
+                width: 0%;
+                background: linear-gradient(90deg, #fff 0%, #f0f0f0 100%);
+                border-radius: 4px;
+                transition: width 2s ease;
+            `;
+
+            const statusText = document.createElement('p');
+            statusText.style.cssText = 'margin: 10px 0 0 0; font-size: 14px; opacity: 0.9;';
+
+            progressBar.appendChild(progressFill);
+            container.appendChild(title);
+            container.appendChild(progressBar);
+            container.appendChild(statusText);
+            document.body.appendChild(container);
+
+            // Animación de análisis de patrones
+            const patterns = [
+                'Analizando 170,208 triples RDF...',
+                'Detectando patrones de migración...',
+                'Evaluando preferencias por género...',
+                'Identificando tendencias socioeconómicas...',
+                'Generando insights de comportamiento...',
+                'Análisis completado ✓'
+            ];
+
+            let currentStep = 0;
+
+            function animatePattern() {
+                if (currentStep === 0) {
+                    // Mostrar contenedor
+                    setTimeout(() => {
+                        container.style.opacity = '1';
+                        container.style.transform = 'translateX(0)';
+                    }, 1000);
+                }
+
+                if (currentStep < patterns.length) {
+                    statusText.textContent = patterns[currentStep];
+                    progressFill.style.width = `${((currentStep + 1) / patterns.length) * 100}%`;
+
+                    if (currentStep === patterns.length - 1) {
+                        // Último paso - mantener visible por más tiempo
+                        setTimeout(() => {
+                            container.style.opacity = '0';
+                            container.style.transform = 'translateX(320px)';
+                            setTimeout(() => container.remove(), 500);
+                        }, 3000);
+                    } else {
+                        setTimeout(animatePattern, 1500);
+                    }
+                    currentStep++;
+                }
+            }
+
+            animatePattern();
+        }
     </script>
 </body>
 </html>
