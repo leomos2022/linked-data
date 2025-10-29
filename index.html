@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked Data - Análisis Universitario</title>
+    <meta name="description" content="Dashboard interactivo de análisis de patrones universitarios usando Linked Data y Web Semántica">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 12px 25px rgba(52, 152, 219, 0.4);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        
+        .feature p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .github-link {
+            margin-top: 30px;
+            opacity: 0.7;
+        }
+        
+        .github-link a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .github-link a:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Linked Data</h1>
+        <p class="subtitle">Análisis de Patrones Universitarios</p>
+        <p class="description">
+            Sistema completo de Web Semántica para analizar comportamientos estudiantiles 
+            usando RDF, OWL y SPARQL. Transformamos 10,000 registros en 170,208 triples RDF 
+            para descubrir patrones ocultos en la selección universitaria colombiana.
+        </p>
+        
+        <div>
+            <a href="visualizations/dashboard_presentacion.html" class="btn">
+                📊 Ver Dashboard Interactivo
+            </a>
+            <a href="https://github.com/leomos2022/linked-data" class="btn btn-secondary" target="_blank">
+                📂 Ver Código en GitHub
+            </a>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔬</div>
+                <h3>Web Semántica</h3>
+                <p>RDF, OWL, SPARQL para análisis inteligente</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📈</div>
+                <h3>Visualizaciones</h3>
+                <p>Dashboard interactivo con Plotly.js</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Insights</h3>
+                <p>Patrones de migración y preferencias</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🏗️</div>
+                <h3>Ontología</h3>
+                <p>8 clases OWL y 17 propiedades</p>
+            </div>
+        </div>
+        
+        <div class="github-link">
+            <p>
+                Desarrollado por <a href="https://github.com/leomos2022" target="_blank">@leomos2022</a>
+                • Curso: Inteligencia Artificial y Sistemas Inteligentes
+            </p>
+        </div>
+    </div>
+</body>
+</html>

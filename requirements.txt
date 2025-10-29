@@ -1,0 +1,7 @@
+rdflib==7.0.0
+pandas==2.1.4
+matplotlib==3.8.2
+seaborn==0.13.0
+plotly==5.17.0
+networkx==3.2.1
+sparqlwrapper==2.0.0

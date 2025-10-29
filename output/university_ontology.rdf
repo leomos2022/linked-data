@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:geo1="http://example.org/geography/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:univ="http://example.org/university/"
+>
+  <rdf:Description rdf:about="http://example.org/university/age">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">edad</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/city_medellín">
+    <rdf:type rdf:resource="http://example.org/geography/City"/>
+    <rdfs:label xml:lang="es">Medellín</rdfs:label>
+    <dc:identifier>Medellín</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/belongsToArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">pertenece al área</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/education/AcademicProgram"/>
+    <rdfs:range rdf:resource="http://example.org/education/KnowledgeArea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/saber11Score">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">puntaje Saber 11</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/area_artes">
+    <rdf:type rdf:resource="http://example.org/education/KnowledgeArea"/>
+    <rdfs:label xml:lang="es">Artes</rdfs:label>
+    <dc:identifier>Artes</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/hasInternationalAgreement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tiene convenio internacional</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/University"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/area_ingeniería">
+    <rdf:type rdf:resource="http://example.org/education/KnowledgeArea"/>
+    <rdfs:label xml:lang="es">Ingeniería</rdfs:label>
+    <dc:identifier>Ingeniería</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/originFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">originario de</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://example.org/geography/City"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/university_u003">
+    <rdf:type rdf:resource="http://example.org/university/University"/>
+    <rdfs:label xml:lang="es">Universidad del Valle</rdfs:label>
+    <dc:identifier>U003</dc:identifier>
+    <dc:title xml:lang="es">Universidad del Valle</dc:title>
+    <geo1:locatedIn rdf:resource="http://example.org/geography/dept_valle_del_cauca"/>
+    <univ:hasType xml:lang="es">Pública</univ:hasType>
+    <univ:isAccredited rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</univ:isAccredited>
+    <univ:nationalRanking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</univ:nationalRanking>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/behavior/BehaviorPattern">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Patrón de Comportamiento</rdfs:label>
+    <rdfs:comment xml:lang="es">Conjunto de decisiones y preferencias observables</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/university_u005">
+    <rdf:type rdf:resource="http://example.org/university/University"/>
+    <rdfs:label xml:lang="es">Universidad Autónoma</rdfs:label>
+    <dc:identifier>U005</dc:identifier>
+    <dc:title xml:lang="es">Universidad Autónoma</dc:title>
+    <geo1:locatedIn rdf:resource="http://example.org/geography/dept_atlántico"/>
+    <univ:hasType xml:lang="es">Privada</univ:hasType>
+    <univ:isAccredited rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</univ:isAccredited>
+    <univ:nationalRanking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</univ:nationalRanking>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/university_u001">
+    <rdf:type rdf:resource="http://example.org/university/University"/>
+    <rdfs:label xml:lang="es">Universidad Nacional</rdfs:label>
+    <dc:identifier>U001</dc:identifier>
+    <dc:title xml:lang="es">Universidad Nacional</dc:title>
+    <geo1:locatedIn rdf:resource="http://example.org/geography/dept_cundinamarca"/>
+    <univ:hasType xml:lang="es">Pública</univ:hasType>
+    <univ:isAccredited rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</univ:isAccredited>
+    <univ:nationalRanking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</univ:nationalRanking>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/prefersArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">prefiere área</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://example.org/education/KnowledgeArea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/Student">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Estudiante</rdfs:label>
+    <rdfs:comment xml:lang="es">Persona que estudia en una institución educativa</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/behavior/makes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">realiza</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://example.org/behavior/AcademicDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/dept_antioquia">
+    <rdf:type rdf:resource="http://example.org/geography/Department"/>
+    <rdfs:label xml:lang="es">Antioquia</rdfs:label>
+    <dc:identifier>Antioquia</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/university_u002">
+    <rdf:type rdf:resource="http://example.org/university/University"/>
+    <rdfs:label xml:lang="es">Universidad de los Andes</rdfs:label>
+    <dc:identifier>U002</dc:identifier>
+    <dc:title xml:lang="es">Universidad de los Andes</dc:title>
+    <geo1:locatedIn rdf:resource="http://example.org/geography/dept_cundinamarca"/>
+    <univ:hasType xml:lang="es">Privada</univ:hasType>
+    <univ:isAccredited rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</univ:isAccredited>
+    <univ:nationalRanking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</univ:nationalRanking>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/area_salud">
+    <rdf:type rdf:resource="http://example.org/education/KnowledgeArea"/>
+    <rdfs:label xml:lang="es">Salud</rdfs:label>
+    <dc:identifier>Salud</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/area_administración">
+    <rdf:type rdf:resource="http://example.org/education/KnowledgeArea"/>
+    <rdfs:label xml:lang="es">Administración</rdfs:label>
+    <dc:identifier>Administración</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/isAccredited">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">está acreditada</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/University"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/behavior/AcademicDecision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Decisión Académica</rdfs:label>
+    <rdfs:comment xml:lang="es">Elección realizada por un estudiante respecto a su educación</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/gender">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">género</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/City">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Ciudad</rdfs:label>
+    <rdfs:comment xml:lang="es">Centro urbano de población</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/hasType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">tiene tipo</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/University"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/Department">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Departamento</rdfs:label>
+    <rdfs:comment xml:lang="es">División administrativa territorial en Colombia</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/behavior/finalDecision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">decisión final</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/behavior/AcademicDecision"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/area_ciencias_sociales">
+    <rdf:type rdf:resource="http://example.org/education/KnowledgeArea"/>
+    <rdfs:label xml:lang="es">Ciencias Sociales</rdfs:label>
+    <dc:identifier>Ciencias Sociales</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/city_bucaramanga">
+    <rdf:type rdf:resource="http://example.org/geography/City"/>
+    <rdfs:label xml:lang="es">Bucaramanga</rdfs:label>
+    <dc:identifier>Bucaramanga</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/locatedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">ubicada en</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/University"/>
+    <rdfs:range rdf:resource="http://example.org/geography/Department"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/city_cali">
+    <rdf:type rdf:resource="http://example.org/geography/City"/>
+    <rdfs:label xml:lang="es">Cali</rdfs:label>
+    <dc:identifier>Cali</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/socioeconomicStratum">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">estrato socioeconómico</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/university_u004">
+    <rdf:type rdf:resource="http://example.org/university/University"/>
+    <rdfs:label xml:lang="es">Universidad de Antioquia</rdfs:label>
+    <dc:identifier>U004</dc:identifier>
+    <dc:title xml:lang="es">Universidad de Antioquia</dc:title>
+    <geo1:locatedIn rdf:resource="http://example.org/geography/dept_antioquia"/>
+    <univ:hasType xml:lang="es">Pública</univ:hasType>
+    <univ:isAccredited rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</univ:isAccredited>
+    <univ:nationalRanking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</univ:nationalRanking>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/dept_atlántico">
+    <rdf:type rdf:resource="http://example.org/geography/Department"/>
+    <rdfs:label xml:lang="es">Atlántico</rdfs:label>
+    <dc:identifier>Atlántico</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/appliesTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">aplica a</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/Student"/>
+    <rdfs:range rdf:resource="http://example.org/university/University"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/AcademicProgram">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Programa Académico</rdfs:label>
+    <rdfs:comment xml:lang="es">Conjunto estructurado de actividades académicas</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/programModality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">modalidad del programa</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/education/AcademicProgram"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/dept_santander">
+    <rdf:type rdf:resource="http://example.org/geography/Department"/>
+    <rdfs:label xml:lang="es">Santander</rdfs:label>
+    <dc:identifier>Santander</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/city_bogotá">
+    <rdf:type rdf:resource="http://example.org/geography/City"/>
+    <rdfs:label xml:lang="es">Bogotá</rdfs:label>
+    <dc:identifier>Bogotá</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/dept_valle_del_cauca">
+    <rdf:type rdf:resource="http://example.org/geography/Department"/>
+    <rdfs:label xml:lang="es">Valle del Cauca</rdfs:label>
+    <dc:identifier>Valle del Cauca</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/nationalRanking">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">ranking nacional</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/University"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/University">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Universidad</rdfs:label>
+    <rdfs:comment xml:lang="es">Institución de educación superior</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/education/KnowledgeArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Área de Conocimiento</rdfs:label>
+    <rdfs:comment xml:lang="es">Campo específico del conocimiento</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/dept_cundinamarca">
+    <rdf:type rdf:resource="http://example.org/geography/Department"/>
+    <rdfs:label xml:lang="es">Cundinamarca</rdfs:label>
+    <dc:identifier>Cundinamarca</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/geography/city_barranquilla">
+    <rdf:type rdf:resource="http://example.org/geography/City"/>
+    <rdfs:label xml:lang="es">Barranquilla</rdfs:label>
+    <dc:identifier>Barranquilla</dc:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/university/hasScholarship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tiene beca disponible</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/university/University"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+</rdf:RDF>

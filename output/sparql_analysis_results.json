@@ -1,0 +1,552 @@
+{
+  "timestamp": "2025-10-29T15:07:41.781538",
+  "total_queries": 9,
+  "total_triples": 170208,
+  "insights": {
+    "universidad_mas_popular": "Universidad Autónoma",
+    "area_mas_popular": "Salud",
+    "mejor_puntaje": 417.8
+  },
+  "queries": {
+    "popularidad_universidades": {
+      "description": "Número de aplicaciones por universidad (popularidad)",
+      "query": "\n        PREFIX univ: <http://example.org/university/>\n        PREFIX dc: <http://purl.org/dc/elements/1.1/>\n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n        \n        SELECT ?universidad ?nombre (COUNT(?estudiante) AS ?aplicaciones)\n        WHERE {\n            ?estudiante univ:appliesTo ?universidad .\n            ?universidad dc:title ?nombre .\n        }\n        GROUP BY ?universidad ?nombre\n        ORDER BY DESC(?aplicaciones)\n        ",
+      "results": [
+        {
+          "universidad": "http://example.org/university/university_u005",
+          "nombre": "Universidad Autónoma",
+          "aplicaciones": "2033"
+        },
+        {
+          "universidad": "http://example.org/university/university_u003",
+          "nombre": "Universidad del Valle",
+          "aplicaciones": "2010"
+        },
+        {
+          "universidad": "http://example.org/university/university_u004",
+          "nombre": "Universidad de Antioquia",
+          "aplicaciones": "2004"
+        },
+        {
+          "universidad": "http://example.org/university/university_u002",
+          "nombre": "Universidad de los Andes",
+          "aplicaciones": "1984"
+        },
+        {
+          "universidad": "http://example.org/university/university_u001",
+          "nombre": "Universidad Nacional",
+          "aplicaciones": "1969"
+        }
+      ],
+      "count": 5
+    },
+    "preferencias_area": {
+      "description": "Distribución de estudiantes por área de preferencia",
+      "query": "\n        PREFIX edu: <http://example.org/education/>\n        PREFIX dc: <http://purl.org/dc/elements/1.1/>\n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n        \n        SELECT ?area ?nombre (COUNT(?estudiante) AS ?estudiantes)\n        WHERE {\n            ?estudiante edu:prefersArea ?area .\n            ?area dc:identifier ?nombre .\n        }\n        GROUP BY ?area ?nombre\n        ORDER BY DESC(?estudiantes)\n        ",
+      "results": [
+        {
+          "area": "http://example.org/education/area_salud",
+          "nombre": "Salud",
+          "estudiantes": "2075"
+        },
+        {
+          "area": "http://example.org/education/area_artes",
+          "nombre": "Artes",
+          "estudiantes": "2036"
+        },
+        {
+          "area": "http://example.org/education/area_ingeniería",
+          "nombre": "Ingeniería",
+          "estudiantes": "2026"
+        },
+        {
+          "area": "http://example.org/education/area_ciencias_sociales",
+          "nombre": "Ciencias Sociales",
+          "estudiantes": "1932"
+        },
+        {
+          "area": "http://example.org/education/area_administración",
+          "nombre": "Administración",
+          "estudiantes": "1931"
+        }
+      ],
+      "count": 5
+    },
+    "migracion_geografica": {
+      "description": "Flujos de migración académica (ciudad origen → departamento destino)",
+      "query": "\n        PREFIX geo: <http://example.org/geography/>\n        PREFIX univ: <http://example.org/university/>\n        PREFIX dc: <http://purl.org/dc/elements/1.1/>\n        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n        \n        SELECT ?ciudad_origen ?dept_destino (COUNT(?estudiante) AS ?flujo)\n        WHERE {\n            ?estudiante geo:originFrom ?ciudad .\n            ?ciudad dc:identifier ?ciudad_origen .\n            ?estudiante univ:appliesTo ?universidad .\n            ?universidad geo:locatedIn ?departamento .\n            ?departamento dc:identifier ?dept_destino .\n        }\n        GROUP BY ?ciudad_origen ?dept_destino\n        HAVING (COUNT(?estudiante) > 50)\n        ORDER BY DESC(?flujo)\n        ",
+      "results": [
+        {
+          "ciudad_origen": "Bogotá",
+          "dept_destino": "Cundinamarca",
+          "flujo": "873"
+        },
+        {
+          "ciudad_origen": "Cali",
+          "dept_destino": "Cundinamarca",
+          "flujo": "794"
+        },
+        {
+          "ciudad_origen": "Medellín",
+          "dept_destino": "Cundinamarca",
+          "flujo": "792"
+        },
+        {
+          "ciudad_origen": "Barranquilla",
+          "dept_destino": "Cundinamarca",
+          "flujo": "771"
+        },
+        {
+          "ciudad_origen": "Bucaramanga",
+          "dept_destino": "Cundinamarca",
+          "flujo": "723"
+        },
+        {
+          "ciudad_origen": "Bogotá",
+          "dept_destino": "Valle del Cauca",
+          "flujo": "463"
+        },
+        {
+          "ciudad_origen": "Cali",
+          "dept_destino": "Atlántico",
+          "flujo": "440"
+        },
+        {
+          "ciudad_origen": "Medellín",
+          "dept_destino": "Atlántico",
+          "flujo": "421"
+        },
+        {
+          "ciudad_origen": "Cali",
+          "dept_destino": "Antioquia",
+          "flujo": "411"
+        },
+        {
+          "ciudad_origen": "Medellín",
+          "dept_destino": "Antioquia",
+          "flujo": "408"
+        },
+        {
+          "ciudad_origen": "Bucaramanga",
+          "dept_destino": "Antioquia",
+          "flujo": "400"
+        },
+        {
+          "ciudad_origen": "Bogotá",
+          "dept_destino": "Atlántico",
+          "flujo": "400"
+        },
+        {
+          "ciudad_origen": "Bogotá",
+          "dept_destino": "Antioquia",
+          "flujo": "397"
+        },
+        {
+          "ciudad_origen": "Bucaramanga",
+          "dept_destino": "Valle del Cauca",
+          "flujo": "393"
+        },
+        {
+          "ciudad_origen": "Bucaramanga",
+          "dept_destino": "Atlántico",
+          "flujo": "389"
+        },
+        {
+          "ciudad_origen": "Barranquilla",
+          "dept_destino": "Antioquia",
+          "flujo": "388"
+        },
+        {
+          "ciudad_origen": "Cali",
+          "dept_destino": "Valle del Cauca",
+          "flujo": "386"
+        },
+        {
+          "ciudad_origen": "Medellín",
+          "dept_destino": "Valle del Cauca",
+          "flujo": "385"
+        },
+        {
+          "ciudad_origen": "Barranquilla",
+          "dept_destino": "Valle del Cauca",
+          "flujo": "383"
+        },
+        {
+          "ciudad_origen": "Barranquilla",
+          "dept_destino": "Atlántico",
+          "flujo": "383"
+        }
+      ],
+      "count": 20
+    },
+    "decisiones_por_estrato": {
+      "description": "Patrones de decisión por estrato socioeconómico y tipo de universidad",
+      "query": "\n        PREFIX univ: <http://example.org/university/>\n        PREFIX behavior: <http://example.org/behavior/>\n        \n        SELECT ?estrato ?tipo_universidad \n               (COUNT(?decision) AS ?decisiones)\n               (SUM(IF(?final_decision, 1, 0)) AS ?decisiones_positivas)\n        WHERE {\n            ?estudiante univ:socioeconomicStratum ?estrato .\n            ?estudiante behavior:makes ?decision .\n            ?decision behavior:finalDecision ?final_decision .\n            ?estudiante univ:appliesTo ?universidad .\n            ?universidad univ:hasType ?tipo_universidad .\n        }\n        GROUP BY ?estrato ?tipo_universidad\n        ORDER BY ?estrato ?tipo_universidad\n        ",
+      "results": [
+        {
+          "estrato": "1",
+          "tipo_universidad": "Privada",
+          "decisiones": "706",
+          "decisiones_positivas": "341"
+        },
+        {
+          "estrato": "1",
+          "tipo_universidad": "Pública",
+          "decisiones": "1004",
+          "decisiones_positivas": "493"
+        },
+        {
+          "estrato": "2",
+          "tipo_universidad": "Privada",
+          "decisiones": "662",
+          "decisiones_positivas": "311"
+        },
+        {
+          "estrato": "2",
+          "tipo_universidad": "Pública",
+          "decisiones": "974",
+          "decisiones_positivas": "445"
+        },
+        {
+          "estrato": "3",
+          "tipo_universidad": "Privada",
+          "decisiones": "696",
+          "decisiones_positivas": "339"
+        },
+        {
+          "estrato": "3",
+          "tipo_universidad": "Pública",
+          "decisiones": "998",
+          "decisiones_positivas": "488"
+        },
+        {
+          "estrato": "4",
+          "tipo_universidad": "Privada",
+          "decisiones": "615",
+          "decisiones_positivas": "310"
+        },
+        {
+          "estrato": "4",
+          "tipo_universidad": "Pública",
+          "decisiones": "1020",
+          "decisiones_positivas": "496"
+        },
+        {
+          "estrato": "5",
+          "tipo_universidad": "Privada",
+          "decisiones": "665",
+          "decisiones_positivas": "324"
+        },
+        {
+          "estrato": "5",
+          "tipo_universidad": "Pública",
+          "decisiones": "990",
+          "decisiones_positivas": "480"
+        },
+        {
+          "estrato": "6",
+          "tipo_universidad": "Privada",
+          "decisiones": "673",
+          "decisiones_positivas": "348"
+        },
+        {
+          "estrato": "6",
+          "tipo_universidad": "Pública",
+          "decisiones": "997",
+          "decisiones_positivas": "516"
+        }
+      ],
+      "count": 12
+    },
+    "preferencias_modalidad": {
+      "description": "Preferencias por modalidad de programa y tasa de aceptación",
+      "query": "\n        PREFIX edu: <http://example.org/education/>\n        PREFIX behavior: <http://example.org/behavior/>\n        \n        SELECT ?modalidad (COUNT(?decision) AS ?decisiones)\n               (AVG(IF(?final_decision, 1.0, 0.0)) AS ?tasa_aceptacion)\n        WHERE {\n            ?decision edu:programModality ?modalidad .\n            ?decision behavior:finalDecision ?final_decision .\n        }\n        GROUP BY ?modalidad\n        ORDER BY DESC(?decisiones)\n        ",
+      "results": [
+        {
+          "modalidad": "Mixta",
+          "decisiones": "3403",
+          "tasa_aceptacion": "0.4936820452541874816338524831"
+        },
+        {
+          "modalidad": "Virtual",
+          "decisiones": "3339",
+          "tasa_aceptacion": "0.4911650194669062593590895478"
+        },
+        {
+          "modalidad": "Presencial",
+          "decisiones": "3258",
+          "tasa_aceptacion": "0.4821976672805402087170042971"
+        }
+      ],
+      "count": 3
+    },
+    "alto_rendimiento": {
+      "description": "Estudiantes de alto rendimiento (puntaje > 350) y sus elecciones",
+      "query": "\n        PREFIX edu: <http://example.org/education/>\n        PREFIX univ: <http://example.org/university/>\n        PREFIX geo: <http://example.org/geography/>\n        PREFIX dc: <http://purl.org/dc/elements/1.1/>\n        \n        SELECT ?puntaje ?area_pref ?universidad ?ranking\n        WHERE {\n            ?estudiante edu:saber11Score ?puntaje .\n            ?estudiante edu:prefersArea ?area .\n            ?area dc:identifier ?area_pref .\n            ?estudiante univ:appliesTo ?universidad .\n            ?universidad univ:nationalRanking ?ranking .\n            FILTER(?puntaje > 350)\n        }\n        ORDER BY DESC(?puntaje)\n        LIMIT 20\n        ",
+      "results": [
+        {
+          "puntaje": "417.8",
+          "area_pref": "Artes",
+          "universidad": "http://example.org/university/university_u005",
+          "ranking": "30"
+        },
+        {
+          "puntaje": "415.6",
+          "area_pref": "Salud",
+          "universidad": "http://example.org/university/university_u001",
+          "ranking": "1"
+        },
+        {
+          "puntaje": "405.9",
+          "area_pref": "Ciencias Sociales",
+          "universidad": "http://example.org/university/university_u004",
+          "ranking": "5"
+        },
+        {
+          "puntaje": "401.3",
+          "area_pref": "Administración",
+          "universidad": "http://example.org/university/university_u003",
+          "ranking": "10"
+        },
+        {
+          "puntaje": "397.3",
+          "area_pref": "Artes",
+          "universidad": "http://example.org/university/university_u002",
+          "ranking": "2"
+        },
+        {
+          "puntaje": "395.8",
+          "area_pref": "Ingeniería",
+          "universidad": "http://example.org/university/university_u002",
+          "ranking": "2"
+        },
+        {
+          "puntaje": "394.7",
+          "area_pref": "Administración",
+          "universidad": "http://example.org/university/university_u001",
+          "ranking": "1"
+        },
+        {
+          "puntaje": "394.6",
+          "area_pref": "Ingeniería",
+          "universidad": "http://example.org/university/university_u004",
+          "ranking": "5"
+        },
+        {
+          "puntaje": "394.1",
+          "area_pref": "Salud",
+          "universidad": "http://example.org/university/university_u004",
+          "ranking": "5"
+        },
+        {
+          "puntaje": "393.5",
+          "area_pref": "Artes",
+          "universidad": "http://example.org/university/university_u003",
+          "ranking": "10"
+        },
+        {
+          "puntaje": "393.4",
+          "area_pref": "Ciencias Sociales",
+          "universidad": "http://example.org/university/university_u005",
+          "ranking": "30"
+        },
+        {
+          "puntaje": "393.3",
+          "area_pref": "Salud",
+          "universidad": "http://example.org/university/university_u003",
+          "ranking": "10"
+        },
+        {
+          "puntaje": "392.9",
+          "area_pref": "Ciencias Sociales",
+          "universidad": "http://example.org/university/university_u001",
+          "ranking": "1"
+        },
+        {
+          "puntaje": "392.4",
+          "area_pref": "Ingeniería",
+          "universidad": "http://example.org/university/university_u004",
+          "ranking": "5"
+        },
+        {
+          "puntaje": "392.3",
+          "area_pref": "Ciencias Sociales",
+          "universidad": "http://example.org/university/university_u002",
+          "ranking": "2"
+        },
+        {
+          "puntaje": "389.8",
+          "area_pref": "Salud",
+          "universidad": "http://example.org/university/university_u003",
+          "ranking": "10"
+        },
+        {
+          "puntaje": "389.6",
+          "area_pref": "Administración",
+          "universidad": "http://example.org/university/university_u002",
+          "ranking": "2"
+        },
+        {
+          "puntaje": "388.5",
+          "area_pref": "Salud",
+          "universidad": "http://example.org/university/university_u004",
+          "ranking": "5"
+        },
+        {
+          "puntaje": "388.3",
+          "area_pref": "Salud",
+          "universidad": "http://example.org/university/university_u002",
+          "ranking": "2"
+        },
+        {
+          "puntaje": "388.1",
+          "area_pref": "Salud",
+          "universidad": "http://example.org/university/university_u005",
+          "ranking": "30"
+        }
+      ],
+      "count": 20
+    },
+    "impacto_becas": {
+      "description": "Impacto de disponibilidad de becas en las decisiones estudiantiles",
+      "query": "\n        PREFIX univ: <http://example.org/university/>\n        PREFIX behavior: <http://example.org/behavior/>\n        PREFIX dc: <http://purl.org/dc/elements/1.1/>\n        \n        SELECT ?tiene_beca ?universidad_nombre\n               (COUNT(?decision) AS ?aplicaciones)\n               (AVG(IF(?final_decision, 1.0, 0.0)) AS ?tasa_eleccion)\n        WHERE {\n            ?estudiante univ:appliesTo ?universidad .\n            ?universidad univ:hasScholarship ?tiene_beca .\n            ?universidad dc:title ?universidad_nombre .\n            ?estudiante behavior:makes ?decision .\n            ?decision behavior:finalDecision ?final_decision .\n        }\n        GROUP BY ?tiene_beca ?universidad_nombre\n        ORDER BY ?tiene_beca DESC(?tasa_eleccion)\n        ",
+      "results": [
+        {
+          "tiene_beca": null,
+          "universidad_nombre": "Universidad de los Andes",
+          "aplicaciones": "1984",
+          "tasa_eleccion": "0.5025201612903225806451612903"
+        },
+        {
+          "tiene_beca": null,
+          "universidad_nombre": "Universidad de Antioquia",
+          "aplicaciones": "2004",
+          "tasa_eleccion": "0.5009980039920159680638722555"
+        },
+        {
+          "tiene_beca": null,
+          "universidad_nombre": "Universidad Nacional",
+          "aplicaciones": "1969",
+          "tasa_eleccion": "0.4819705434230573895378364652"
+        },
+        {
+          "tiene_beca": null,
+          "universidad_nombre": "Universidad del Valle",
+          "aplicaciones": "2010",
+          "tasa_eleccion": "0.4800995024875621890547263682"
+        },
+        {
+          "tiene_beca": null,
+          "universidad_nombre": "Universidad Autónoma",
+          "aplicaciones": "2033",
+          "tasa_eleccion": "0.4800787014264633546483030005"
+        },
+        {
+          "tiene_beca": "true",
+          "universidad_nombre": "Universidad de los Andes",
+          "aplicaciones": "1984",
+          "tasa_eleccion": "0.5025201612903225806451612903"
+        },
+        {
+          "tiene_beca": "true",
+          "universidad_nombre": "Universidad de Antioquia",
+          "aplicaciones": "2004",
+          "tasa_eleccion": "0.5009980039920159680638722555"
+        },
+        {
+          "tiene_beca": "true",
+          "universidad_nombre": "Universidad Nacional",
+          "aplicaciones": "1969",
+          "tasa_eleccion": "0.4819705434230573895378364652"
+        },
+        {
+          "tiene_beca": "true",
+          "universidad_nombre": "Universidad del Valle",
+          "aplicaciones": "2010",
+          "tasa_eleccion": "0.4800995024875621890547263682"
+        },
+        {
+          "tiene_beca": "true",
+          "universidad_nombre": "Universidad Autónoma",
+          "aplicaciones": "2033",
+          "tasa_eleccion": "0.4800787014264633546483030005"
+        }
+      ],
+      "count": 10
+    },
+    "patrones_genero": {
+      "description": "Distribución de preferencias académicas por género",
+      "query": "\n        PREFIX univ: <http://example.org/university/>\n        PREFIX edu: <http://example.org/education/>\n        PREFIX dc: <http://purl.org/dc/elements/1.1/>\n        \n        SELECT ?genero ?area_pref (COUNT(?estudiante) AS ?estudiantes)\n        WHERE {\n            ?estudiante univ:gender ?genero .\n            ?estudiante edu:prefersArea ?area .\n            ?area dc:identifier ?area_pref .\n        }\n        GROUP BY ?genero ?area_pref\n        ORDER BY ?genero DESC(?estudiantes)\n        ",
+      "results": [
+        {
+          "genero": "F",
+          "area_pref": "Ingeniería",
+          "estudiantes": "1021"
+        },
+        {
+          "genero": "F",
+          "area_pref": "Salud",
+          "estudiantes": "1001"
+        },
+        {
+          "genero": "F",
+          "area_pref": "Ciencias Sociales",
+          "estudiantes": "999"
+        },
+        {
+          "genero": "F",
+          "area_pref": "Administración",
+          "estudiantes": "991"
+        },
+        {
+          "genero": "F",
+          "area_pref": "Artes",
+          "estudiantes": "988"
+        },
+        {
+          "genero": "M",
+          "area_pref": "Salud",
+          "estudiantes": "1074"
+        },
+        {
+          "genero": "M",
+          "area_pref": "Artes",
+          "estudiantes": "1048"
+        },
+        {
+          "genero": "M",
+          "area_pref": "Ingeniería",
+          "estudiantes": "1005"
+        },
+        {
+          "genero": "M",
+          "area_pref": "Administración",
+          "estudiantes": "940"
+        },
+        {
+          "genero": "M",
+          "area_pref": "Ciencias Sociales",
+          "estudiantes": "933"
+        }
+      ],
+      "count": 10
+    },
+    "preferencia_acreditacion": {
+      "description": "Preferencia por universidades acreditadas vs no acreditadas",
+      "query": "\n        PREFIX univ: <http://example.org/university/>\n        PREFIX behavior: <http://example.org/behavior/>\n        \n        SELECT ?acreditada \n               (COUNT(?aplicacion) AS ?aplicaciones)\n               (AVG(IF(?final_decision, 1.0, 0.0)) AS ?tasa_eleccion)\n        WHERE {\n            ?estudiante univ:appliesTo ?universidad .\n            ?universidad univ:isAccredited ?acreditada .\n            ?estudiante behavior:makes ?decision .\n            ?decision behavior:finalDecision ?final_decision .\n        }\n        GROUP BY ?acreditada\n        ",
+      "results": [
+        {
+          "acreditada": "true",
+          "aplicaciones": null,
+          "tasa_eleccion": "0.4914020333877243629973641270"
+        },
+        {
+          "acreditada": null,
+          "aplicaciones": null,
+          "tasa_eleccion": "0.4800787014264633546483030005"
+        }
+      ],
+      "count": 2
+    }
+  }
+}

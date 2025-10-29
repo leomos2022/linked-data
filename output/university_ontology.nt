@@ -1,0 +1,180 @@
+<http://example.org/university/age> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .
+<http://example.org/geography/city_medellín> <http://www.w3.org/2000/01/rdf-schema#label> "Medellín"@es .
+<http://example.org/education/belongsToArea> <http://www.w3.org/2000/01/rdf-schema#label> "pertenece al área"@es .
+<http://example.org/education/saber11Score> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://example.org/education/area_artes> <http://purl.org/dc/elements/1.1/identifier> "Artes" .
+<http://example.org/university/hasInternationalAgreement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/University> .
+<http://example.org/education/area_ingeniería> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/education/KnowledgeArea> .
+<http://example.org/geography/originFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .
+<http://example.org/university/university_u003> <http://purl.org/dc/elements/1.1/identifier> "U003" .
+<http://example.org/behavior/BehaviorPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Patrón de Comportamiento"@es .
+<http://example.org/university/university_u005> <http://example.org/university/nationalRanking> "30"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/university/university_u001> <http://example.org/university/isAccredited> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/education/prefersArea> <http://www.w3.org/2000/01/rdf-schema#label> "prefiere área"@es .
+<http://example.org/university/Student> <http://www.w3.org/2000/01/rdf-schema#comment> "Persona que estudia en una institución educativa"@es .
+<http://example.org/behavior/makes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/geography/dept_antioquia> <http://purl.org/dc/elements/1.1/identifier> "Antioquia" .
+<http://example.org/geography/city_medellín> <http://purl.org/dc/elements/1.1/identifier> "Medellín" .
+<http://example.org/university/university_u002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university/University> .
+<http://example.org/education/area_salud> <http://www.w3.org/2000/01/rdf-schema#label> "Salud"@es .
+<http://example.org/university/university_u003> <http://example.org/university/hasType> "Pública"@es .
+<http://example.org/education/area_administración> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/education/KnowledgeArea> .
+<http://example.org/university/isAccredited> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/University> .
+<http://example.org/behavior/AcademicDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Decisión Académica"@es .
+<http://example.org/university/university_u005> <http://purl.org/dc/elements/1.1/identifier> "U005" .
+<http://example.org/university/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/geography/originFrom> <http://www.w3.org/2000/01/rdf-schema#label> "originario de"@es .
+<http://example.org/university/Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/geography/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university/hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university/hasInternationalAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/geography/Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+<http://example.org/behavior/BehaviorPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university/university_u001> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad Nacional"@es .
+<http://example.org/behavior/finalDecision> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/education/area_ciencias_sociales> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias Sociales"@es .
+<http://example.org/geography/city_bucaramanga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/City> .
+<http://example.org/geography/locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/education/area_ingeniería> <http://www.w3.org/2000/01/rdf-schema#label> "Ingeniería"@es .
+<http://example.org/geography/city_cali> <http://www.w3.org/2000/01/rdf-schema#label> "Cali"@es .
+<http://example.org/university/socioeconomicStratum> <http://www.w3.org/2000/01/rdf-schema#label> "estrato socioeconómico"@es .
+<http://example.org/university/university_u005> <http://example.org/geography/locatedIn> <http://example.org/geography/dept_atlántico> .
+<http://example.org/university/university_u004> <http://example.org/geography/locatedIn> <http://example.org/geography/dept_antioquia> .
+<http://example.org/university/isAccredited> <http://www.w3.org/2000/01/rdf-schema#label> "está acreditada"@es .
+<http://example.org/university/university_u001> <http://example.org/university/nationalRanking> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/geography/dept_atlántico> <http://www.w3.org/2000/01/rdf-schema#label> "Atlántico"@es .
+<http://example.org/university/appliesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/university/University> .
+<http://example.org/university/socioeconomicStratum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/education/AcademicProgram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university/appliesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .
+<http://example.org/university/university_u001> <http://example.org/university/hasType> "Pública"@es .
+<http://example.org/university/isAccredited> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/education/programModality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/education/area_administración> <http://www.w3.org/2000/01/rdf-schema#label> "Administración"@es .
+<http://example.org/university/hasType> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tipo"@es .
+<http://example.org/geography/dept_santander> <http://www.w3.org/2000/01/rdf-schema#label> "Santander"@es .
+<http://example.org/education/programModality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/geography/city_bogotá> <http://www.w3.org/2000/01/rdf-schema#label> "Bogotá"@es .
+<http://example.org/university/university_u004> <http://example.org/university/hasType> "Pública"@es .
+<http://example.org/university/university_u002> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad de los Andes"@es .
+<http://example.org/education/AcademicProgram> <http://www.w3.org/2000/01/rdf-schema#label> "Programa Académico"@es .
+<http://example.org/education/area_ciencias_sociales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/education/KnowledgeArea> .
+<http://example.org/geography/dept_valle_del_cauca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/Department> .
+<http://example.org/education/programModality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/education/AcademicProgram> .
+<http://example.org/behavior/makes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .
+<http://example.org/university/nationalRanking> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/University> .
+<http://example.org/university/university_u002> <http://purl.org/dc/elements/1.1/title> "Universidad de los Andes"@es .
+<http://example.org/university/university_u001> <http://example.org/geography/locatedIn> <http://example.org/geography/dept_cundinamarca> .
+<http://example.org/education/programModality> <http://www.w3.org/2000/01/rdf-schema#label> "modalidad del programa"@es .
+<http://example.org/geography/dept_atlántico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/Department> .
+<http://example.org/education/area_artes> <http://www.w3.org/2000/01/rdf-schema#label> "Artes"@es .
+<http://example.org/university/university_u004> <http://purl.org/dc/elements/1.1/title> "Universidad de Antioquia"@es .
+<http://example.org/geography/Department> <http://www.w3.org/2000/01/rdf-schema#label> "Departamento"@es .
+<http://example.org/university/University> <http://www.w3.org/2000/01/rdf-schema#comment> "Institución de educación superior"@es .
+<http://example.org/behavior/BehaviorPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de decisiones y preferencias observables"@es .
+<http://example.org/university/age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university/university_u005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university/University> .
+<http://example.org/behavior/AcademicDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "Elección realizada por un estudiante respecto a su educación"@es .
+<http://example.org/university/university_u003> <http://purl.org/dc/elements/1.1/title> "Universidad del Valle"@es .
+<http://example.org/university/gender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/geography/dept_valle_del_cauca> <http://www.w3.org/2000/01/rdf-schema#label> "Valle del Cauca"@es .
+<http://example.org/university/hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/University> .
+<http://example.org/university/university_u004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university/University> .
+<http://example.org/behavior/finalDecision> <http://www.w3.org/2000/01/rdf-schema#label> "decisión final"@es .
+<http://example.org/university/Student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/education/KnowledgeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/geography/City> <http://www.w3.org/2000/01/rdf-schema#comment> "Centro urbano de población"@es .
+<http://example.org/geography/dept_antioquia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/Department> .
+<http://example.org/geography/locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/University> .
+<http://example.org/university/university_u003> <http://example.org/geography/locatedIn> <http://example.org/geography/dept_valle_del_cauca> .
+<http://example.org/university/Student> <http://www.w3.org/2000/01/rdf-schema#label> "Estudiante"@es .
+<http://example.org/education/area_administración> <http://purl.org/dc/elements/1.1/identifier> "Administración" .
+<http://example.org/education/prefersArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/education/KnowledgeArea> .
+<http://example.org/geography/dept_cundinamarca> <http://purl.org/dc/elements/1.1/identifier> "Cundinamarca" .
+<http://example.org/university/hasInternationalAgreement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/university/university_u002> <http://purl.org/dc/elements/1.1/identifier> "U002" .
+<http://example.org/geography/city_barranquilla> <http://purl.org/dc/elements/1.1/identifier> "Barranquilla" .
+<http://example.org/university/nationalRanking> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/university/university_u002> <http://example.org/university/isAccredited> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/university/university_u003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university/University> .
+<http://example.org/geography/city_barranquilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/City> .
+<http://example.org/university/university_u004> <http://example.org/university/nationalRanking> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/university/hasScholarship> <http://www.w3.org/2000/01/rdf-schema#label> "tiene beca disponible"@es .
+<http://example.org/geography/Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/education/saber11Score> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .
+<http://example.org/university/university_u002> <http://example.org/university/hasType> "Privada"@es .
+<http://example.org/geography/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+<http://example.org/university/socioeconomicStratum> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .
+<http://example.org/education/area_salud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/education/KnowledgeArea> .
+<http://example.org/geography/dept_cundinamarca> <http://www.w3.org/2000/01/rdf-schema#label> "Cundinamarca"@es .
+<http://example.org/geography/dept_santander> <http://purl.org/dc/elements/1.1/identifier> "Santander" .
+<http://example.org/university/university_u004> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad de Antioquia"@es .
+<http://example.org/education/belongsToArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/education/AcademicProgram> .
+<http://example.org/geography/Department> <http://www.w3.org/2000/01/rdf-schema#comment> "División administrativa territorial en Colombia"@es .
+<http://example.org/university/university_u002> <http://example.org/geography/locatedIn> <http://example.org/geography/dept_cundinamarca> .
+<http://example.org/university/university_u003> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad del Valle"@es .
+<http://example.org/education/area_ingeniería> <http://purl.org/dc/elements/1.1/identifier> "Ingeniería" .
+<http://example.org/university/hasScholarship> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/University> .
+<http://example.org/geography/originFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/geography/City> .
+<http://example.org/university/isAccredited> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/university/university_u003> <http://example.org/university/nationalRanking> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/university/University> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/EducationalOrganization> .
+<http://example.org/behavior/AcademicDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/education/prefersArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university/hasInternationalAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "tiene convenio internacional"@es .
+<http://example.org/geography/locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "ubicada en"@es .
+<http://example.org/education/AcademicProgram> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto estructurado de actividades académicas"@es .
+<http://example.org/university/university_u003> <http://example.org/university/isAccredited> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/geography/City> <http://www.w3.org/2000/01/rdf-schema#label> "Ciudad"@es .
+<http://example.org/geography/city_bogotá> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/City> .
+<http://example.org/university/university_u005> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad Autónoma"@es .
+<http://example.org/behavior/makes> <http://www.w3.org/2000/01/rdf-schema#label> "realiza"@es .
+<http://example.org/education/saber11Score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university/university_u005> <http://example.org/university/isAccredited> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/university/university_u001> <http://purl.org/dc/elements/1.1/identifier> "U001" .
+<http://example.org/university/appliesTo> <http://www.w3.org/2000/01/rdf-schema#label> "aplica a"@es .
+<http://example.org/education/belongsToArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/education/KnowledgeArea> .
+<http://example.org/university/age> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/education/area_artes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/education/KnowledgeArea> .
+<http://example.org/geography/dept_antioquia> <http://www.w3.org/2000/01/rdf-schema#label> "Antioquia"@es .
+<http://example.org/university/gender> <http://www.w3.org/2000/01/rdf-schema#label> "género"@es .
+<http://example.org/geography/dept_atlántico> <http://purl.org/dc/elements/1.1/identifier> "Atlántico" .
+<http://example.org/university/university_u005> <http://purl.org/dc/elements/1.1/title> "Universidad Autónoma"@es .
+<http://example.org/university/appliesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/geography/city_cali> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/City> .
+<http://example.org/education/area_ciencias_sociales> <http://purl.org/dc/elements/1.1/identifier> "Ciencias Sociales" .
+<http://example.org/university/hasScholarship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/behavior/makes> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/behavior/AcademicDecision> .
+<http://example.org/geography/dept_valle_del_cauca> <http://purl.org/dc/elements/1.1/identifier> "Valle del Cauca" .
+<http://example.org/university/university_u001> <http://purl.org/dc/elements/1.1/title> "Universidad Nacional"@es .
+<http://example.org/geography/city_medellín> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/City> .
+<http://example.org/university/nationalRanking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/education/KnowledgeArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Campo específico del conocimiento"@es .
+<http://example.org/geography/originFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/university/age> <http://www.w3.org/2000/01/rdf-schema#label> "edad"@es .
+<http://example.org/university/hasScholarship> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/geography/city_barranquilla> <http://www.w3.org/2000/01/rdf-schema#label> "Barranquilla"@es .
+<http://example.org/university/university_u002> <http://example.org/university/nationalRanking> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/education/KnowledgeArea> <http://www.w3.org/2000/01/rdf-schema#label> "Área de Conocimiento"@es .
+<http://example.org/university/nationalRanking> <http://www.w3.org/2000/01/rdf-schema#label> "ranking nacional"@es .
+<http://example.org/geography/dept_santander> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/Department> .
+<http://example.org/education/belongsToArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/geography/city_cali> <http://purl.org/dc/elements/1.1/identifier> "Cali" .
+<http://example.org/university/university_u004> <http://example.org/university/isAccredited> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://example.org/education/area_salud> <http://purl.org/dc/elements/1.1/identifier> "Salud" .
+<http://example.org/university/university_u005> <http://example.org/university/hasType> "Privada"@es .
+<http://example.org/behavior/finalDecision> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/behavior/AcademicDecision> .
+<http://example.org/behavior/finalDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/geography/locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/geography/Department> .
+<http://example.org/geography/city_bogotá> <http://purl.org/dc/elements/1.1/identifier> "Bogotá" .
+<http://example.org/education/prefersArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .
+<http://example.org/university/University> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad"@es .
+<http://example.org/geography/city_bucaramanga> <http://www.w3.org/2000/01/rdf-schema#label> "Bucaramanga"@es .
+<http://example.org/geography/dept_cundinamarca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/geography/Department> .
+<http://example.org/education/saber11Score> <http://www.w3.org/2000/01/rdf-schema#label> "puntaje Saber 11"@es .
+<http://example.org/university/University> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/university/university_u004> <http://purl.org/dc/elements/1.1/identifier> "U004" .
+<http://example.org/university/university_u001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/university/University> .
+<http://example.org/geography/city_bucaramanga> <http://purl.org/dc/elements/1.1/identifier> "Bucaramanga" .
+<http://example.org/university/socioeconomicStratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/university/gender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/university/Student> .

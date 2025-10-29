@@ -1,0 +1,236 @@
+@prefix behavior: <http://example.org/behavior/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix edu: <http://example.org/education/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo1: <http://example.org/geography/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix univ: <http://example.org/university/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+behavior:BehaviorPattern a owl:Class ;
+    rdfs:label "Patrón de Comportamiento"@es ;
+    rdfs:comment "Conjunto de decisiones y preferencias observables"@es .
+
+behavior:finalDecision a owl:DatatypeProperty ;
+    rdfs:label "decisión final"@es ;
+    rdfs:domain behavior:AcademicDecision ;
+    rdfs:range xsd:boolean .
+
+behavior:makes a owl:ObjectProperty ;
+    rdfs:label "realiza"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range behavior:AcademicDecision .
+
+edu:area_administración a edu:KnowledgeArea ;
+    rdfs:label "Administración"@es ;
+    dc:identifier "Administración" .
+
+edu:area_artes a edu:KnowledgeArea ;
+    rdfs:label "Artes"@es ;
+    dc:identifier "Artes" .
+
+edu:area_ciencias_sociales a edu:KnowledgeArea ;
+    rdfs:label "Ciencias Sociales"@es ;
+    dc:identifier "Ciencias Sociales" .
+
+edu:area_ingeniería a edu:KnowledgeArea ;
+    rdfs:label "Ingeniería"@es ;
+    dc:identifier "Ingeniería" .
+
+edu:area_salud a edu:KnowledgeArea ;
+    rdfs:label "Salud"@es ;
+    dc:identifier "Salud" .
+
+edu:belongsToArea a owl:ObjectProperty ;
+    rdfs:label "pertenece al área"@es ;
+    rdfs:domain edu:AcademicProgram ;
+    rdfs:range edu:KnowledgeArea .
+
+edu:prefersArea a owl:ObjectProperty ;
+    rdfs:label "prefiere área"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range edu:KnowledgeArea .
+
+edu:programModality a owl:DatatypeProperty ;
+    rdfs:label "modalidad del programa"@es ;
+    rdfs:domain edu:AcademicProgram ;
+    rdfs:range xsd:string .
+
+edu:saber11Score a owl:DatatypeProperty ;
+    rdfs:label "puntaje Saber 11"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range xsd:decimal .
+
+geo1:city_barranquilla a geo1:City ;
+    rdfs:label "Barranquilla"@es ;
+    dc:identifier "Barranquilla" .
+
+geo1:city_bogotá a geo1:City ;
+    rdfs:label "Bogotá"@es ;
+    dc:identifier "Bogotá" .
+
+geo1:city_bucaramanga a geo1:City ;
+    rdfs:label "Bucaramanga"@es ;
+    dc:identifier "Bucaramanga" .
+
+geo1:city_cali a geo1:City ;
+    rdfs:label "Cali"@es ;
+    dc:identifier "Cali" .
+
+geo1:city_medellín a geo1:City ;
+    rdfs:label "Medellín"@es ;
+    dc:identifier "Medellín" .
+
+geo1:dept_santander a geo1:Department ;
+    rdfs:label "Santander"@es ;
+    dc:identifier "Santander" .
+
+geo1:locatedIn a owl:ObjectProperty ;
+    rdfs:label "ubicada en"@es ;
+    rdfs:domain univ:University ;
+    rdfs:range geo1:Department .
+
+geo1:originFrom a owl:ObjectProperty ;
+    rdfs:label "originario de"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range geo1:City .
+
+univ:age a owl:DatatypeProperty ;
+    rdfs:label "edad"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range xsd:integer .
+
+univ:appliesTo a owl:ObjectProperty ;
+    rdfs:label "aplica a"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range univ:University .
+
+univ:gender a owl:DatatypeProperty ;
+    rdfs:label "género"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range xsd:string .
+
+univ:hasInternationalAgreement a owl:DatatypeProperty ;
+    rdfs:label "tiene convenio internacional"@es ;
+    rdfs:domain univ:University ;
+    rdfs:range xsd:boolean .
+
+univ:hasScholarship a owl:DatatypeProperty ;
+    rdfs:label "tiene beca disponible"@es ;
+    rdfs:domain univ:University ;
+    rdfs:range xsd:boolean .
+
+univ:hasType a owl:ObjectProperty ;
+    rdfs:label "tiene tipo"@es ;
+    rdfs:domain univ:University .
+
+univ:isAccredited a owl:DatatypeProperty ;
+    rdfs:label "está acreditada"@es ;
+    rdfs:domain univ:University ;
+    rdfs:range xsd:boolean .
+
+univ:nationalRanking a owl:DatatypeProperty ;
+    rdfs:label "ranking nacional"@es ;
+    rdfs:domain univ:University ;
+    rdfs:range xsd:integer .
+
+univ:socioeconomicStratum a owl:DatatypeProperty ;
+    rdfs:label "estrato socioeconómico"@es ;
+    rdfs:domain univ:Student ;
+    rdfs:range xsd:integer .
+
+univ:university_u001 a univ:University ;
+    rdfs:label "Universidad Nacional"@es ;
+    geo1:locatedIn geo1:dept_cundinamarca ;
+    univ:hasType "Pública"@es ;
+    univ:isAccredited true ;
+    univ:nationalRanking 1 ;
+    dc:identifier "U001" ;
+    dc:title "Universidad Nacional"@es .
+
+univ:university_u002 a univ:University ;
+    rdfs:label "Universidad de los Andes"@es ;
+    geo1:locatedIn geo1:dept_cundinamarca ;
+    univ:hasType "Privada"@es ;
+    univ:isAccredited true ;
+    univ:nationalRanking 2 ;
+    dc:identifier "U002" ;
+    dc:title "Universidad de los Andes"@es .
+
+univ:university_u003 a univ:University ;
+    rdfs:label "Universidad del Valle"@es ;
+    geo1:locatedIn geo1:dept_valle_del_cauca ;
+    univ:hasType "Pública"@es ;
+    univ:isAccredited true ;
+    univ:nationalRanking 10 ;
+    dc:identifier "U003" ;
+    dc:title "Universidad del Valle"@es .
+
+univ:university_u004 a univ:University ;
+    rdfs:label "Universidad de Antioquia"@es ;
+    geo1:locatedIn geo1:dept_antioquia ;
+    univ:hasType "Pública"@es ;
+    univ:isAccredited true ;
+    univ:nationalRanking 5 ;
+    dc:identifier "U004" ;
+    dc:title "Universidad de Antioquia"@es .
+
+univ:university_u005 a univ:University ;
+    rdfs:label "Universidad Autónoma"@es ;
+    geo1:locatedIn geo1:dept_atlántico ;
+    univ:hasType "Privada"@es ;
+    univ:isAccredited false ;
+    univ:nationalRanking 30 ;
+    dc:identifier "U005" ;
+    dc:title "Universidad Autónoma"@es .
+
+geo1:dept_antioquia a geo1:Department ;
+    rdfs:label "Antioquia"@es ;
+    dc:identifier "Antioquia" .
+
+geo1:dept_atlántico a geo1:Department ;
+    rdfs:label "Atlántico"@es ;
+    dc:identifier "Atlántico" .
+
+geo1:dept_valle_del_cauca a geo1:Department ;
+    rdfs:label "Valle del Cauca"@es ;
+    dc:identifier "Valle del Cauca" .
+
+behavior:AcademicDecision a owl:Class ;
+    rdfs:label "Decisión Académica"@es ;
+    rdfs:comment "Elección realizada por un estudiante respecto a su educación"@es .
+
+edu:AcademicProgram a owl:Class ;
+    rdfs:label "Programa Académico"@es ;
+    rdfs:comment "Conjunto estructurado de actividades académicas"@es .
+
+geo1:dept_cundinamarca a geo1:Department ;
+    rdfs:label "Cundinamarca"@es ;
+    dc:identifier "Cundinamarca" .
+
+geo1:City a owl:Class ;
+    rdfs:label "Ciudad"@es ;
+    rdfs:comment "Centro urbano de población"@es ;
+    rdfs:subClassOf schema1:Place .
+
+geo1:Department a owl:Class ;
+    rdfs:label "Departamento"@es ;
+    rdfs:comment "División administrativa territorial en Colombia"@es ;
+    rdfs:subClassOf schema1:Place .
+
+edu:KnowledgeArea a owl:Class ;
+    rdfs:label "Área de Conocimiento"@es ;
+    rdfs:comment "Campo específico del conocimiento"@es .
+
+univ:Student a owl:Class ;
+    rdfs:label "Estudiante"@es ;
+    rdfs:comment "Persona que estudia en una institución educativa"@es ;
+    rdfs:subClassOf foaf:Person .
+
+univ:University a owl:Class ;
+    rdfs:label "Universidad"@es ;
+    rdfs:comment "Institución de educación superior"@es ;
+    rdfs:subClassOf schema1:EducationalOrganization .
+
